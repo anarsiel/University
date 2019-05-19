@@ -1,0 +1,128 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc} % если ваш файл содержит русский текст, нужно указать кодировку
+\usepackage[russian]{babel} % для того, чтобы писать русский текст
+\usepackage{amsmath} % для команды equation*
+\usepackage{hyperref} % для вставки ссылок
+\usepackage{graphicx}
+\title{My first document}
+\date{2017-09-08}
+\author{Jon Snow}
+
+% до этого места была преамбула, тут можно задавать разные значения переменных, включать пакеты, а также указывать вещи, которые не суждено поменять посреди документа
+\begin{document}
+  \pagenumbering{gobble} % сейчас будет титульная страницу, отключим нумерацию страниц
+
+  \maketitle % эта команда печатает титульную страницу
+  \newpage % эта команда начинает новую страницу
+  \pagenumbering{arabic} % включим нумерацию страниц обратно
+
+  Hello World!
+
+  \newpage
+
+На этой странице все понятно из исходного кода. Вообще, интересный tutorial на английском можно почитать \href{https://www.latex-tutorial.com/tutorials/}{здесь}. Да, это была ссылка.
+
+\section{Section}
+
+Hello World!
+
+\subsection{Subsection}
+
+Structuring a document is easy!
+
+\subsubsection{Subsubsection}
+
+More text.
+
+\paragraph{Paragraph}
+
+Some more text.
+
+\subparagraph{Subparagraph}
+
+Even more text.
+
+\section{Another section}
+
+\newpage
+
+Команда \texttt{equation} вводит формулу и приписывает справа номер:
+
+\begin{equation}
+  T(n) = \sqrt{n} T(\sqrt{n}) + n
+\end{equation}
+
+Для этой цели подключен пакет \texttt{amsmath}, команда \texttt{equation*} как \texttt{equation}, только не приписывает номер:
+
+\begin{equation*}
+  T(n) = \sqrt{n} T(\sqrt{n}) + n
+\end{equation*}
+
+Можно также без всяких \texttt{equation} делать формулу с помощью \texttt{\$\$}:
+
+$$ T(n) = \mathcal{O}(n \log{\log{n}}) $$ 
+
+А также можно показать, что $T(n) = \Omega(n \log{\log{n}})$. Иногда также полезно замечать, что $(A \implies B) \implies (\neg{B} \implies \neg{A})$. А как вы заметили здесь, формулы можно встраивать в текст с помощью одинарного \texttt{\$}.
+
+Еще вы заметили, что я использовал \texttt{\textbackslash{}texttt}, чтобы писать \texttt{моноширинный текст}.
+
+Чтобы переходить к следующему абзацу просто дважды переведите строку, а чтобы перевести строку введите \texttt{\textbackslash{}\textbackslash{}}.
+
+Давайте вставим код:
+\begin{verbatim}
+  val a = IntArray(n, { scanner.nextInt() })
+  for (i in 0 until n) {
+    a[i] /= 2
+  }
+  a.sort()
+  println("This is array: ${Arrays.toString(a)}")
+\end{verbatim}
+
+
+Давайте побольше разных формулок попробуем: $\sum\limits_{k=0}^n k^2 = \frac{n(n+1)(2n+1)}{6}$. Или: ${n \choose k} = \frac{n!}{k!(n-k)!}$. 
+
+Отсортируем: $a_1, a_2, \ldots, a_n$, получим $a_{i_1}, a_{i_2}, \ldots, a_{i_n}$ такую, что $a_{i_j} \le a_{i_{j+1}}$ $\forall j: 1 \le j < n$. 
+
+А если мы построим граф $G = \langle V, E \rangle$, и найдем в нем $v \to u$, где $v, u \in V$, а все ребра в множестве $E \subset V \times V$.
+
+Наверное, вы захотите уметь вставлять картинку. Для этого вам понадобится \texttt{\textbackslash{}includegraphics}:
+
+\includegraphics[scale=0.5]{itmo_logo_rus_vert_blue.eps}
+
+Можно еще черно-белый попробовать с прозрачным фоном и в \texttt{.png}:
+
+\includegraphics[scale=0.2]{bw_eng.png}
+
+Ну и давайте таблицу еще сделаем и поместим ее по центру:
+
+\begin{center}
+  \begin{tabular}{|c|cc|} % с значит, что выравнивание по центру, вертикальная палка отвечает за то, где есть разделитель между столбцами
+  \hline
+    hello & it's & me \\
+    QWERTY787788 & abacabadabacaba & ee \\
+  \hline
+    это & третья & строка \\
+  \hline
+  \end{tabular}
+\end{center}
+
+
+Перечислим что-нибудь:
+\begin{enumerate}
+  \item посмотреть на рекуррентную формулу, попробовать угадать ответ;
+  \item если функция вызывается несколько раз, то может быть, стоит нарисовать дерево рекурсии;
+  \item попробуем доказать оценку сверху ($\mathcal{O}$) по индукции;
+  \item предположим, что $T(n) \le c \cdot f(n)$;
+  \item ...
+  \item PROFIT!!!!
+\end{enumerate}
+
+Еще можно точечки ставить:
+\begin{itemize}
+  \item третий
+  \item первый
+  \item второй
+\end{itemize}
+
+\end{document}

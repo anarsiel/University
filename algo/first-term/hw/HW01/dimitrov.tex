@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Homework 1}
+\date{2018-11-09}
+\author{Dimitrov Blagoi}
+
+\begin{document}
+  \pagenumbering{gobble}
+
+  \maketitle
+  \newpage
+  \pagenumbering{arabic}
+
+  \newpage
+
+  \paragraph{Задание 1}
+
+  \begin{equation}
+  	\sum\limits_{i=1}^{n+5} 2^i = \mathcal{O}(2^n)
+  \end{equation}
+
+  Рассмотрим левую часть. Из двоичного представления чисел очевидно:
+
+  \begin{equation}
+    \sum\limits_{i=1}^{n+5} 2^i = 2^{n+6} - 2
+  \end{equation}
+
+  Подставляем (2) в (1):
+
+  \begin{equation}
+    2^{n+6} - 2 = \mathcal{O}(2^n)
+  \end{equation}
+
+  По определению $\mathcal{O}(n)$, (3) $\Leftrightarrow \exists$ $c = const:$
+
+  \begin{equation*}
+    2^{n+6} - 2 \leq c \, 2^n
+  \end{equation*}
+
+  Возьмем $c = 2^6$. Подставим и получим очевидно верное неравенство:
+
+  \begin{equation*}
+    2^{n+6} - 2 \leq 2^{n+6}
+  \end{equation*}
+  
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright}
+
+  \paragraph{Задание 2}
+  \setcounter{equation}{0}
+  
+  \begin{equation}
+    \frac{n^3}{6} - 7n^2 = \Omega(n^3)
+  \end{equation}
+
+  По определению $\Omega(n)$, (1) $\Leftrightarrow \exists$ $c = const:$
+
+  $$ \frac{n^3}{6} - 7n^2 \geq c n^3 $$
+  $$ n^3(\frac{1}{6} - c) \geq 7n^2 $$
+
+  Неравенство выполняется при $ c = \frac{1}{7} $.
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright} 
+
+  \paragraph{Задание 3}
+  \setcounter{equation}{0}
+
+  \begin{equation*}
+    \max(f(n), \, g(n)) = \Theta(f(n) + g(n))
+  \end{equation*}
+
+  Пусть $\psi(n) = \max(f(n), \, g(n))$, тогда имеем:
+
+  \begin{equation}
+    \psi(n) = \Theta(f(n) + g(n))
+  \end{equation}
+
+  По определению $\Theta(n)$, (1) $\Leftrightarrow \exists$ $c_{1} = const, \, c_{2} = const:$
+
+  \begin{equation*}
+    c_{1}f(n) + c_{1}g(n) \overset{*}{\le} \psi(n) \overset{**}{\le} c_{2} f(n) + c_{2}g(n)
+  \end{equation*}
+
+  Неравенство $(**)$ очевидно верно при $c_{2} \geq 1$ так как $f(n)$ и $g(n)$ по условию неотрицательны, а $\psi(n)$ для $\forall n$ равно либо $f(n)$, либо $g(n)$.
+
+  Рассмотрим $(*)$	. Так как $\psi(n) = \max(f(n), \, g(n))$, то:
+
+  $$\psi(n) \geq \frac{1}{2} f(n) + \frac{1}{2} g(n)$$
+  Получаем, что $при c_{2} = \frac{1}{2}$ неравенство выполняется.
+
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright} 
+
+  \paragraph{Задание 4}
+  \setcounter{equation}{0} 
+  $$ $$
+  1, $(\frac{3}{2})^2$, $n^{\frac{1}{\log{n}}}$, $\log{\log{n}}$, $\sqrt{\log{n}}$, $(\sqrt{2})^{\log{n}}$, $n$, $\log^2{n}$, $n \log{n}$, $4^{\log{n}}$, $(\log{n})!$, $n^2$, $(\log{n})^{\log{n}}$, $n^{\log{\log{n}}}$, $n^3$, $e^{n}$, $n \cdot 2^{n}$, $2^{2^n}$, $2^{2^{n + 1}}$, $\log{n!}$, $n!$, $(n + 1)!$
+
+\end{document}
