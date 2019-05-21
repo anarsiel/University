@@ -15,6 +15,7 @@
 Лабораторные:
   * [Хеш-таблицы](https://github.com/SweeetyFox/University/tree/master/algo/second-term/labs/Hash-Tables)
   * [Деревья поиска](https://github.com/SweeetyFox/University/tree/master/algo/second-term/labs/Search-Trees)
+  * [Запросы на отрезках](https://github.com/SweeetyFox/University/tree/master/algo/second-term/labs/RMQ-LCA-And-Their-Friends)
   
 Письменные домашки:
   * [ДЗ 8](https://github.com/SweeetyFox/University/tree/master/algo/second-term/hw/HW08)
