@@ -1,4 +1,4 @@
-# University
+# ITMO University
 ## [Алгоритмы и структуры данных](https://github.com/SweeetyFox/University/tree/master/algo)
 ### Первый Семестр
   Лабораторные:
@@ -36,7 +36,7 @@
 Домашки:
   * [Длинная арифметика на ассемблер](https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint)
   * [Длинная арифметика на C++](https://github.com/SweeetyFox/University/tree/master/cpp/asm-bigint)
-  * [Длинная арифметика + CopyOnWrite + SmallObjectOptimization] (https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint-optimized)
+  * [Длинная арифметика + CopyOnWrite + SmallObjectOptimization](https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint-optimized)
 
 ## [Парадигмы программирования](https://github.com/SweeetyFox/University/tree/master/paradigms)
 ### Первый семестр
