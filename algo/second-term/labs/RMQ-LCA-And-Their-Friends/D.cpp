@@ -2,7 +2,7 @@
 // Created by Anarsiel on 2019-05-22.
 //
 
-// It is NOT RMQ, it is RVQ
+// It is NOT RMQ, it is modified RVQ!
 
 #include <iostream>
 #include <vector>
