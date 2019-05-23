@@ -145,6 +145,10 @@ long long min(int left, int right, int v) {
 }
 
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
     int n;
     cin >> n;
 
