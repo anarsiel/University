@@ -19,6 +19,7 @@
   
 Письменные домашки:
   * [ДЗ 8](https://github.com/SweeetyFox/University/tree/master/algo/second-term/hw/HW08)
+  * [ДЗ 13](https://github.com/SweeetyFox/University/tree/master/algo/second-term/hw/HW13)
 
 ## [Дискретная математика](https://github.com/SweeetyFox/University/tree/master/dm)
 ### Первый семестр
