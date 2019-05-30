@@ -78,3 +78,6 @@ CMakeLists.txt
 #test files
 *Test*.java
 *test*.java
+
+#temporary baned cpp hw's
+*/cpp/cpp-bigint-optimized/*
