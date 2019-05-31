@@ -7,19 +7,57 @@
 #include <algorithm>
 #include <unordered_map>
 
-//bool operator <(std::pair<char, uint32_t> a, std::pair<char, uint32_t> b) {
-//    return a.second > b.second;
-//}
+struct huffman::qux {
+    bool operator() (const std::pair<std::string, uint32_t>& a, const std::pair<std::string, uint32_t>& b) const {
+        return a.second > b.second;
+    }
+};
+
+void huffman::build_tree(std::vector<bool> &cur_key) {
+    if (keys_backwards.find(cur_key) != keys_backwards.end()) {
+        tree.push_back('U');
+        cur_key.pop_back();
+        return;
+    }
+
+    tree.push_back('L');
+    cur_key.push_back(false);
+    build_tree(cur_key);
+
+    tree.push_back('R');
+    cur_key.push_back(true);
+    build_tree(cur_key);
+
+
+    tree.push_back('U');
+    cur_key.pop_back();
+    return;
+}
 
 void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
     std::unordered_map<char, std::vector<bool>> _keys;
-    std::priority_queue<std::pair<std::string, uint32_t>, std::vector<std::pair<std::string, uint32_t>>, cmp> priority_queue;
+
+    std::priority_queue<std::pair<std::string, uint32_t>,
+    std::vector<std::pair<std::string, uint32_t>>, qux> priority_queue;
+
+    if (count.size() == 1) {
+        tree = "";
+        return;
+    }
+
+    if (count.size() == 1) {
+        keys[count[0].first] = {false};
+        tree = "LU";
+        return;
+    }
 
     for (size_t i = 0; i < count.size(); ++i) {
         priority_queue.push({std::string(1, count[i].first), count[i].second});
     }
 
-    for (size_t i = 0; i < count.size() - 1; ++i) {
+    // @@@ magic @@@
+    // [1 .. size] not [0 .. size - 1] bcz it dz nt work for empty count
+    for (size_t i = 1; i < count.size(); ++i) {
         auto min1 = priority_queue.top();
         priority_queue.pop();
         auto min2 = priority_queue.top();
@@ -36,14 +74,22 @@ void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
         priority_queue.push({min1.first + min2.first, min1.second + min2.second});
     }
 
-
     for (auto key : _keys) {
         auto v = key.second;
         std::reverse(v.begin(), v.end());
         keys[key.first] = v;
+        keys_backwards[v] = key.first;
     }
+
+    std::vector<bool> cur_key = {};
+    build_tree(cur_key);
+    tree.pop_back();
 };
 
 std::unordered_map<char, std::vector<bool>> huffman::get_keys() {
     return keys;
+}
+
+std::string huffman::get_tree() {
+    return tree;
 }

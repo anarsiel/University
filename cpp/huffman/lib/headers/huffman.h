@@ -9,6 +9,7 @@
 #include <vector>
 #include <queue>
 #include <unordered_map>
+#include <unordered_set>
 
 struct huffman {
 
@@ -18,13 +19,15 @@ struct huffman {
 
     std::unordered_map<char, std::vector<bool>> get_keys();
 
+    std::string get_tree();
+
 private:
-    struct cmp {
-        bool operator() (const std::pair<std::string, uint32_t>& a, const std::pair<std::string, uint32_t>& b) const {
-            return a.second > b.second;
-        }
-    };
+    std::string tree;
     std::unordered_map<char, std::vector<bool>> keys;
+    std::unordered_map<std::vector<bool>, char> keys_backwards;
+
+    struct qux;
+    void build_tree(std::vector<bool> &cur_key);
 };
 
 #endif //LIB_HUFFMAN_H
