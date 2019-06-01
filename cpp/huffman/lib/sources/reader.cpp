@@ -2,7 +2,7 @@
 // Created by Anarsiel on 2019-05-30.
 //
 
-#include "reader.h"
+#include "../headers/reader.h"
 
 void reader::read_buffer() {
     my_file_reader.read(buffer, BUFFER_SIZE);
