@@ -40,8 +40,7 @@ void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
     std::priority_queue<std::pair<std::string, uint32_t>,
     std::vector<std::pair<std::string, uint32_t>>, qux> priority_queue;
 
-    if (count.size() == 1) {
-        tree = "";
+    if (count.size() == 0) {
         return;
     }
 
@@ -84,12 +83,16 @@ void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
     std::vector<bool> cur_key = {};
     build_tree(cur_key);
     tree.pop_back();
-};
+}
 
-std::unordered_map<char, std::vector<bool>> huffman::get_keys() {
+std::string const &huffman::get_tree() const {
+    return tree;
+}
+
+std::unordered_map<char, std::vector<bool>> const &huffman::get_keys() const {
     return keys;
 }
 
-std::string huffman::get_tree() {
-    return tree;
+size_t huffman::get_tree_size() const {
+    return tree.size();
 }
