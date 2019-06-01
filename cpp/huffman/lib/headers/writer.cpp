@@ -5,7 +5,7 @@
 #include "writer.h"
 
 writer::writer(std::string const &file_name) :
-        my_file_writer(file_name, std::ofstream::binary), start_index(0),  {}
+        my_file_writer(file_name, std::ofstream::binary), start_index(0) {}
 
 writer::~writer() {
     write_buffer();

@@ -10,7 +10,7 @@
 
 struct writer {
 
-    writer(std::string const &file_name);
+    explicit writer(std::string const &file_name);
     ~writer();
 
     void write_char(char c);
