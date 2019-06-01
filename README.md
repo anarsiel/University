@@ -39,6 +39,7 @@
   * [Длинная арифметика на ассемблер](https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint)
   * [Длинная арифметика на C++](https://github.com/SweeetyFox/University/tree/master/cpp/asm-bigint)
   * [Длинная арифметика + CopyOnWrite + SmallObjectOptimization](https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint-optimized)
+  * [Huffman](https://github.com/anarsiel/University/tree/master/cpp/huffman/lib)
 
 ## [Парадигмы программирования](https://github.com/SweeetyFox/University/tree/master/paradigms)
 ### Первый семестр
