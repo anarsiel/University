@@ -20,6 +20,8 @@ struct reader {
 private:
     std::ifstream my_file_reader;
 
+    bool bof;
+
     size_t start_index;
     size_t end_index;
 

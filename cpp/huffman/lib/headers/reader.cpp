@@ -4,15 +4,24 @@
 
 #include "reader.h"
 
+void reader::read_buffer() {
+    my_file_reader.read(buffer, BUFFER_SIZE);
+    start_index = 0;
+    end_index = static_cast<size_t>(my_file_reader.gcount());
+}
+
 reader::reader(std::string const &file_name) :
-            my_file_reader(file_name, std::ifstream::binary), start_index(0), end_index(0) {}
+my_file_reader(file_name, std::ifstream::binary), start_index(0), end_index(0), bof(true) {
+    if  (my_file_reader.fail()) {
+        my_file_reader.close();
+        throw std::runtime_error("Oh-la-la! File not found.");
+    }
+
+    read_buffer();
+}
 
 reader::~reader() {
     my_file_reader.close();
-}
-
-void reader::read_buffer() {
-    my_file_reader.get(buffer, BUFFER_SIZE);
 }
 
 bool reader::is_eof() const {
@@ -20,14 +29,12 @@ bool reader::is_eof() const {
 }
 
 char reader::read_char() {
-    if (start_index == end_index) {
-        read_buffer();
-        start_index = 0;
-        end_index = static_cast<size_t>(my_file_reader.gcount());
+    if (is_eof()) {
+        throw std::runtime_error("Surprise! Unexpected end of file.");
     }
 
-    if (is_eof()) {
-        throw std::runtime_error("Error: surprise! Unexpected end of file.");
+    if (start_index == end_index) {
+        read_buffer();
     }
     return buffer[start_index++];
 }
