@@ -10,12 +10,12 @@
 
 struct reader {
 
-    reader(std::string const &file_name);
+    explicit reader(std::string const &file_name);
     ~reader();
 
     char read_char();
 
-    bool is_eof();
+    bool is_eof() const;
 
 private:
     std::ifstream my_file_reader;

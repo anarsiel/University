@@ -15,7 +15,7 @@ void reader::read_buffer() {
     my_file_reader.get(buffer, BUFFER_SIZE);
 }
 
-bool reader::is_eof() {
+bool reader::is_eof() const {
     return start_index == end_index && my_file_reader.eof();
 }
 
