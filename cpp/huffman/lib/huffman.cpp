@@ -2,7 +2,7 @@
 // Created by Anarsiel on 2019-05-31.
 //
 
-#include "headers/huffman.h"
+#include "huffman.h"
 #include <string>
 #include <algorithm>
 #include <unordered_map>
