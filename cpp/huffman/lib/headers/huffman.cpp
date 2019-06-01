@@ -54,9 +54,7 @@ void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
         priority_queue.push({std::string(1, count[i].first), count[i].second});
     }
 
-    // @@@ magic @@@
-    // [1 .. size] not [0 .. size - 1] bcz it dz nt work for empty count
-    for (size_t i = 1; i < count.size(); ++i) {
+    for (size_t i = 0; i < count.size() - 1; ++i) {
         auto min1 = priority_queue.top();
         priority_queue.pop();
         auto min2 = priority_queue.top();
