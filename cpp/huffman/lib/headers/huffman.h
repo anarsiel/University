@@ -9,17 +9,16 @@
 #include <vector>
 #include <queue>
 #include <unordered_map>
-#include <unordered_set>
 
 struct huffman {
 
-    huffman() = default;
-
     void do_huffman(std::vector<std::pair<char, uint32_t>> const &count);
 
-    std::unordered_map<char, std::vector<bool>> get_keys();
+    std::string const &get_tree() const;
 
-    std::string get_tree();
+    std::unordered_map<char, std::vector<bool>> const &get_keys() const;
+
+    size_t get_tree_size() const;
 
 private:
     std::string tree;
