@@ -11,19 +11,26 @@
 struct reader {
 
     explicit reader(std::string const &file_name);
+    reader(reader const &other);
+
+    reader();
+
     ~reader();
 
     char read_char();
 
     bool is_eof() const;
 
+    void jmp_to_stream_beg();
+
 private:
     std::ifstream my_file_reader;
-
-    bool bof;
+    std::string file_name;
 
     size_t start_index;
     size_t end_index;
+
+    bool eof;
 
     const static size_t BUFFER_SIZE = 239;
     char buffer[BUFFER_SIZE];
