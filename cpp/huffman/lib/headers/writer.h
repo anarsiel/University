@@ -11,12 +11,14 @@
 struct writer {
 
     explicit writer(std::string const &file_name);
+    writer(writer const &other);
     ~writer();
 
     void write_char(char c);
 
 private:
     std::ofstream my_file_writer;
+    std::string file_name;
 
     size_t start_index;
 

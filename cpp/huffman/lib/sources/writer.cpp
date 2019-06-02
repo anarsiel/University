@@ -5,7 +5,16 @@
 #include "../headers/writer.h"
 
 writer::writer(std::string const &file_name) :
-        my_file_writer(file_name, std::ofstream::binary), start_index(0) {}
+        my_file_writer(file_name, std::ofstream::binary), start_index(0), file_name(file_name) {}
+
+writer::writer(writer const &other) : my_file_writer(other.file_name, std::ifstream::binary) {
+    file_name = other.file_name;
+    start_index = other.start_index;
+
+    for (size_t i = 0; i < BUFFER_SIZE; ++i) {
+        buffer[i] = other.buffer[i];
+    }
+}
 
 writer::~writer() {
     write_buffer();

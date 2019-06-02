@@ -16,6 +16,7 @@ struct huffman::qux {
 void huffman::build_tree(std::vector<bool> &cur_key) {
     if (keys_backwards.find(cur_key) != keys_backwards.end()) {
         tree.push_back('U');
+        values_in_dfs_order.push_back(keys_backwards[cur_key]);
         cur_key.pop_back();
         return;
     }
@@ -91,6 +92,10 @@ std::unordered_map<char, std::vector<bool>> const &huffman::get_keys() const {
     return keys;
 }
 
-size_t huffman::get_tree_size() const {
+uint32_t huffman::get_tree_length() const {
     return tree.size();
+}
+
+const std::vector<char> &huffman::get_values_in_dfs_order() const {
+    return values_in_dfs_order;
 }
