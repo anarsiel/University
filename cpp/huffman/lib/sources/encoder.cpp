@@ -102,14 +102,17 @@ std::vector<char> encoder::uint32_to_chars(uint32_t x) {
         bools[31 - i] = ((x & 1) != 0);
         x >>= 1;
     }
-    std::vector<char> result(4);
+    std::vector<char> result;
     convert_32bools_to_4chars(bools, result);
     return result;
 }
 
 void encoder::convert_32bools_to_4chars(std::vector<bool> const &bools, std::vector<char> &chars) {
-    for (size_t i = 0; i < 32; ++i) {
-        chars[i % 4] = 0;
-        chars[i % 4] += bools[i] * (1 << (i % 8));
+    chars.assign(4, 0);
+    for (size_t i = 0; i < 8; ++i) {
+        chars[0] += static_cast<char>(bools[i] * (1 << (7 - i % 8)));
+        chars[1] += static_cast<char>(bools[i + 8] * (1 << (7 - i % 8)));
+        chars[2] += static_cast<char>(bools[i + 16] * (1 << (7 - i % 8)));
+        chars[3] += static_cast<char>(bools[i + 24] * (1 << (7 - i % 8)));
     }
 }
