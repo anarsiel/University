@@ -22,11 +22,11 @@ writer::~writer() {
 }
 
 void writer::write_buffer() {
-    my_file_writer.write(buffer, start_index);
+    my_file_writer.write(reinterpret_cast<const char *>(buffer), start_index);
     start_index = 0;
 }
 
-void writer::write_char(char c) {
+void writer::write_char(uint8_t c) {
     if (start_index == BUFFER_SIZE) {
         write_buffer();
     }

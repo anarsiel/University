@@ -13,16 +13,9 @@
 using namespace std;
 
 int main() {
-//    reader r = reader("/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/stuff/file.in");
-//    writer w = writer("/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/stuff/file.out");
-//    while (!r.is_eof()) {
-//        char c = r.read_char();
-//        cout << c << endl;
-//        w.write_char(c);
-//    }
-
     string input_file_name = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/stuff/file.in";
     string output_file_name = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/stuff/file.out";
+//    string tmp = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/stuff/tmp.out";
     {
         encoder e = encoder(input_file_name, output_file_name);
         e.encode();

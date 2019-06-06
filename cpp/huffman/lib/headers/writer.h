@@ -14,7 +14,7 @@ struct writer {
     writer(writer const &other);
     ~writer();
 
-    void write_char(char c);
+    void write_char(uint8_t c);
 
 private:
     std::ofstream my_file_writer;
@@ -23,7 +23,7 @@ private:
     size_t start_index;
 
     const static size_t BUFFER_SIZE = 239;
-    char buffer[BUFFER_SIZE];
+    uint8_t buffer[BUFFER_SIZE];
 
     void write_buffer();
 };
