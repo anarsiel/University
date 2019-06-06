@@ -69,7 +69,15 @@ void decoder::decode() {
                 output.push_back(keys_backwards[cur_key]);
                 cur_key.clear();
             }
+
+            if (max_key_length < cur_key.size()) {
+                throw std::runtime_error("Ooops! File is broken.");
+            }
         }
+    }
+
+    if (text_size != 0) {
+        throw std::runtime_error("Ooops! File is broken.");
     }
 }
 

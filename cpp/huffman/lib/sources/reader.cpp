@@ -31,7 +31,7 @@ bool reader::is_eof() const {
 
 uint8_t reader::read_char() {
     if (is_eof()) {
-        throw std::runtime_error("Oh-la-la! File is broken.");
+        throw std::runtime_error("Oh-la-la! Unexpected end of file.");
     }
 
     uint8_t c = buffer[start_index++];
