@@ -25,7 +25,7 @@ private:
     std::string output_file_name;
 
     size_t max_key_length;
-    std::unordered_map<std::vector<bool>, char> keys_backwards;
+    std::unordered_map<std::vector<bool>, uint8_t> keys_backwards;
 
     uint32_t decode_uint32();
     void decode_keys_backwards();

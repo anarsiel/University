@@ -5,7 +5,7 @@
 #include "../headers/reader.h"
 
 void reader::read_buffer() {
-    my_file_reader.read(buffer, BUFFER_SIZE);
+    my_file_reader.read(reinterpret_cast<char *>(buffer), BUFFER_SIZE);
     start_index = 0;
     end_index = my_file_reader.gcount();
     eof = (end_index == 0);
@@ -29,12 +29,12 @@ bool reader::is_eof() const {
     return eof;
 }
 
-char reader::read_char() {
+uint8_t reader::read_char() {
     if (is_eof()) {
         throw std::runtime_error("Surprise! Unexpected end of file.");
     }
 
-    char c = buffer[start_index++];
+    uint8_t c = buffer[start_index++];
 
     if (start_index == end_index) {
         read_buffer();

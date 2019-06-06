@@ -29,14 +29,13 @@ void huffman::build_tree(std::vector<bool> &cur_key) {
     cur_key.push_back(true);
     build_tree(cur_key);
 
-
     tree.push_back('U');
     cur_key.pop_back();
     return;
 }
 
-void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
-    std::unordered_map<char, std::vector<bool>> _keys;
+void huffman::do_huffman(std::vector<std::pair<uint8_t, uint32_t>> const &count) {
+    std::unordered_map<uint8_t, std::vector<bool>> _keys;
 
     std::priority_queue<std::pair<std::string, uint32_t>,
     std::vector<std::pair<std::string, uint32_t>>, qux> priority_queue;
@@ -47,7 +46,9 @@ void huffman::do_huffman(std::vector<std::pair<char, uint32_t>> const &count) {
 
     if (count.size() == 1) {
         keys[count[0].first] = {false};
+        keys_backwards[{false}] = count[0].first;
         tree = "LU";
+        values_in_dfs_order = {count[0].first};
         return;
     }
 
@@ -88,7 +89,7 @@ std::string const &huffman::get_tree() const {
     return tree;
 }
 
-std::unordered_map<char, std::vector<bool>> const &huffman::get_keys() const {
+std::unordered_map<uint8_t, std::vector<bool>> const &huffman::get_keys() const {
     return keys;
 }
 
@@ -96,6 +97,6 @@ uint32_t huffman::get_tree_length() const {
     return tree.size();
 }
 
-const std::vector<char> &huffman::get_values_in_dfs_order() const {
+const std::vector<uint8_t> &huffman::get_values_in_dfs_order() const {
     return values_in_dfs_order;
 }

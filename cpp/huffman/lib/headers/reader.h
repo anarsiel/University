@@ -17,7 +17,7 @@ struct reader {
 
     ~reader();
 
-    char read_char();
+    uint8_t read_char();
 
     bool is_eof() const;
 
@@ -33,7 +33,7 @@ private:
     bool eof;
 
     const static size_t BUFFER_SIZE = 239;
-    char buffer[BUFFER_SIZE];
+    uint8_t buffer[BUFFER_SIZE];
 
     void read_buffer();
 };

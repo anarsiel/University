@@ -10,7 +10,7 @@ decoder::decoder(std::string const &input_file_name, std::string const &output_f
 
 void decoder::decode_keys_backwards() {
     // tree decode
-    std::vector<char> tree;
+    std::vector<uint8_t> tree;
     size_t tree_length = decode_uint32();
 
     for (size_t i = 0; i < tree_length; ++i) {
@@ -20,7 +20,7 @@ void decoder::decode_keys_backwards() {
 
     // values decode
     size_t values_length = decode_uint32();
-    std::vector<char> values_in_dfs_order(values_length);
+    std::vector<uint8_t> values_in_dfs_order(values_length);
     for (size_t i = 0; i < values_length; ++i) {
         values_in_dfs_order[i] = r.read_char();
     }
@@ -35,8 +35,8 @@ void decoder::decode_keys_backwards() {
             bools.push_back(0);
             was_down = true;
         } else if (tree[i] == 'R') {
-            was_down = true;
             bools.push_back(1);
+            was_down = true;
         } else {
             if (was_down) {
                 was_down = false;
@@ -52,8 +52,10 @@ void decoder::decode() {
     decode_keys_backwards();
     size_t text_size = decode_uint32();
 
+
     std::vector<bool> cur_key;
     std::vector<bool> buf_for_char(8);
+    std::string output = "";
     while (!r.is_eof()) {
         size_t c = static_cast<size_t>(r.read_char());
         for (size_t i = 0; i < 8; ++i) {
@@ -68,6 +70,7 @@ void decoder::decode() {
 
             if (keys_backwards.find(cur_key) != keys_backwards.end()) {
                 w.write_char(keys_backwards[cur_key]);
+                output.push_back(keys_backwards[cur_key]);
                 cur_key.clear();
             }
         }

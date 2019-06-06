@@ -25,10 +25,10 @@ private:
     std::string input_file_name;
     std::string output_file_name;
 
-    std::vector<std::pair<char, uint32_t>> count;
+    std::vector<std::pair<uint8_t, uint32_t>> count;
 
-    std::vector<char> uint32_to_chars(uint32_t x);
-    void convert_32bools_to_4chars(std::vector<bool> const &bools, std::vector<char> &chars);
+    std::vector<uint8_t> uint32_to_chars(uint32_t x);
+    void convert_32bools_to_4chars(std::vector<bool> const &bools, std::vector<uint8_t> &chars);
 };
 
 #endif //LIB_ENCODER_H
