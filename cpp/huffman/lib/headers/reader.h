@@ -5,7 +5,6 @@
 // Created by Anarsiel on 2019-05-30.
 //
 
-#include <cstddef>
 #include <fstream>
 
 struct reader {

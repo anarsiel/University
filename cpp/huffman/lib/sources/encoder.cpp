@@ -2,8 +2,8 @@
 // Created by Anarsiel on 2019-05-31.
 //
 
-#include <iostream>
 #include <unordered_map>
+
 #include "../headers/encoder.h"
 #include "../headers/huffman.h"
 
@@ -52,7 +52,6 @@ void encoder::encode() {
     for (char c : values_in_dfs_order) {
         w.write_char(c);
     }
-//    std::cout << values_in_dfs_order.size() << std::endl;
 
     // encoded text length
     uint32_t enc_text_length = 0;
@@ -60,7 +59,6 @@ void encoder::encode() {
         enc_text_length += keys[count[i].first].size() * count[i].second;
     }
 
-    std::cout << enc_text_length << std::endl;
     std::vector<uint8_t> chars_enc_text_length = uint32_to_chars(enc_text_length);
     for (char c : chars_enc_text_length) {
         w.write_char(c);

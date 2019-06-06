@@ -22,9 +22,6 @@ private:
     reader r;
     writer w;
 
-    std::string input_file_name;
-    std::string output_file_name;
-
     std::vector<std::pair<uint8_t, uint32_t>> count;
 
     std::vector<uint8_t> uint32_to_chars(uint32_t x);

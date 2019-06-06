@@ -15,7 +15,7 @@ reader::reader(std::string const &file_name) :
 my_file_reader(file_name, std::ifstream::binary), start_index(0), end_index(0), file_name(file_name), eof(false) {
     if  (my_file_reader.fail()) {
         my_file_reader.close();
-        throw std::runtime_error("Oh-la-la! File not found.");
+        throw std::runtime_error("Surprise! File not found.");
     }
 
     read_buffer();
@@ -31,7 +31,7 @@ bool reader::is_eof() const {
 
 uint8_t reader::read_char() {
     if (is_eof()) {
-        throw std::runtime_error("Surprise! Unexpected end of file.");
+        throw std::runtime_error("Oh-la-la! File is broken.");
     }
 
     uint8_t c = buffer[start_index++];

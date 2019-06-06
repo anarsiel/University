@@ -2,10 +2,10 @@
 // Created by Anarsiel on 2019-05-31.
 //
 
-#include "../headers/huffman.h"
 #include <string>
-#include <algorithm>
 #include <unordered_map>
+
+#include "../headers/huffman.h"
 
 struct huffman::qux {
     bool operator() (const std::pair<std::string, uint32_t>& a, const std::pair<std::string, uint32_t>& b) const {

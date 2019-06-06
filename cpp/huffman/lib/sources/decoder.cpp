@@ -2,7 +2,6 @@
 // Created by Anarsiel on 2019-06-01.
 //
 
-#include <iostream>
 #include "../headers/decoder.h"
 
 decoder::decoder(std::string const &input_file_name, std::string const &output_file_name)
@@ -12,11 +11,9 @@ void decoder::decode_keys_backwards() {
     // tree decode
     std::vector<uint8_t> tree;
     size_t tree_length = decode_uint32();
-
     for (size_t i = 0; i < tree_length; ++i) {
         tree.push_back(r.read_char());
     }
-
 
     // values decode
     size_t values_length = decode_uint32();
@@ -51,7 +48,6 @@ void decoder::decode_keys_backwards() {
 void decoder::decode() {
     decode_keys_backwards();
     size_t text_size = decode_uint32();
-
 
     std::vector<bool> cur_key;
     std::vector<bool> buf_for_char(8);
