@@ -49,25 +49,25 @@ public class Task {
 
     static class Tree {
         int size;
-        int[] parent;
-        int[] depth;
+        int[] p;
+        int[] depths;
         int[][] dp;
         int[][] min;
         int[] w;
         int root = 1;
         int log;
-        ArrayList<ArrayList<Integer>> edges;
+        ArrayList<ArrayList<Integer>> v;
 
         Tree(int size, InputReader source) {
             this.size = size;
             this.w = new int[size + 10];
-            this.parent = new int[size + 10];
-            this.depth = new int[size + 10];
+            this.p = new int[size + 10];
+            this.depths = new int[size + 10];
             this.dp = new int[size + 10][log2(size) + 1];
             this.min = new int[size + 10][log2(size) + 1];
-            this.edges = new ArrayList<>();
+            this.v = new ArrayList<>();
             for (int i = 0; i <= size; i++) {
-                edges.add(new ArrayList<>());
+                v.add(new ArrayList<>());
             }
             log = log2(size);
 
@@ -82,7 +82,7 @@ public class Task {
             int v1 = v;
             int u1 = u;
             if (lca == v) {
-                int h = depth[u1] - depth[v1];
+                int h = depths[u1] - depths[v1];
                 for (int i = log; i >= 0; i--) {
                     if ((1 << i) <= h) {
                         h -= (1 << i);
@@ -91,7 +91,7 @@ public class Task {
                     }
                 }
             } else if (lca == u) {
-                int h = depth[v1] - depth[u1];
+                int h = depths[v1] - depths[u1];
                 for (int i = log; i >= 0; i--) {
                     if ((1 << i) <= h) {
                         h -= (1 << i);
@@ -107,13 +107,13 @@ public class Task {
         }
 
         public int lca(int v, int u) {
-            if (depth[v] > depth[u]) {
+            if (depths[v] > depths[u]) {
                 int tmp = v;
                 v = u;
                 u = tmp;
             }
 
-            int h = depth[u] - depth[v];
+            int h = depths[u] - depths[v];
             for (int i = log; i >= 0; i--) {
                 if ((1 << i) <= h) {
                     h -= (1 << i);
@@ -132,13 +132,13 @@ public class Task {
                 }
             }
 
-            return parent[v];
+            return p[v];
         }
 
         private void dfs(int v, int d) {
-            depth[v] = d;
-            for (int i = 0; i < edges.get(v).size(); i++) {
-                int to = edges.get(v).get(i);
+            depths[v] = d;
+            for (int i = 0; i < v.get(v).size(); i++) {
+                int to = v.get(v).get(i);
                 dfs(to, d + 1);
             }
         }
@@ -149,15 +149,15 @@ public class Task {
                 int x = source.nextInt();
                 int y = source.nextInt();
 
-                parent[i] = x;
-                edges.get(x).add(i);
+                p[i] = x;
+                v.get(x).add(i);
                 w[i] = y;
             }
         }
 
         private void setDp() {
             for (int i = 1; i <= size; i++) {
-                dp[i][0] = parent[i];
+                dp[i][0] = p[i];
                 min[i][0] = w[i];
             }
 
@@ -172,8 +172,8 @@ public class Task {
         public void print() {
             for (int i = 1; i <= size; i++) {
                 System.out.print(i + ": ");
-                for (int j = 0; j < edges.get(i).size(); j++) {
-                    System.out.print(edges.get(i).get(j) + " ");
+                for (int j = 0; j < v.get(i).size(); j++) {
+                    System.out.print(v.get(i).get(j) + " ");
                 }
                 System.out.println();
             }
