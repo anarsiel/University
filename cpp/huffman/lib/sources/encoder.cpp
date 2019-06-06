@@ -31,6 +31,7 @@ void encoder::encode() {
     std::string tree = h.get_tree();
     std::vector<char> tree_length = uint32_to_chars(h.get_tree_length());
     std::vector<char> values_in_dfs_order = h.get_values_in_dfs_order();
+    std::vector<char> values_size = uint32_to_chars(values_in_dfs_order.size());
 
     // tree length
     for (char c : tree_length) {
@@ -40,6 +41,11 @@ void encoder::encode() {
     // tree
     for (size_t i = 0; i < tree.size(); ++i) {
         w.write_char(tree[i]);
+    }
+
+    // values_size
+    for (char c : values_size) {
+        w.write_char(c);
     }
 
     // values

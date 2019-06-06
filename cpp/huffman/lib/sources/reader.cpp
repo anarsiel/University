@@ -21,18 +21,6 @@ my_file_reader(file_name, std::ifstream::binary), start_index(0), end_index(0), 
     read_buffer();
 }
 
-//reader::reader(reader const &other) : my_file_reader(other.file_name, std::ifstream::binary) {
-//    file_name = other.file_name;
-//    start_index = other.start_index;
-//    end_index = other.end_index;
-//    my_file_reader.eof() = other.my_file_reader.eof();
-//    eof = other.eof;
-//
-//    for (size_t i = 0; i < BUFFER_SIZE; ++i) {
-//        buffer[i] = other.buffer[i];
-//    }
-//}
-
 reader::~reader() {
     my_file_reader.close();
 }
