@@ -11,6 +11,7 @@ void decoder::decode_keys_backwards() {
     // tree decode
     std::vector<uint8_t> tree;
     size_t tree_length = decode_uint32();
+
     for (size_t i = 0; i < tree_length; ++i) {
         tree.push_back(r.read_char());
     }

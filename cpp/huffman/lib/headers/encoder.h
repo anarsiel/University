@@ -21,7 +21,7 @@ struct encoder {
 private:
     reader r;
     writer w;
-
+    
     std::vector<std::pair<uint8_t, uint32_t>> count;
 
     std::vector<uint8_t> uint32_to_chars(uint32_t x);
