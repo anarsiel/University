@@ -1,0 +1,9 @@
+buffer.buf
+
+inputs/small_random_test.in
+inputs/average_random_test.in
+inputs/big_random_test.in
+
+outputs/small_random_test.in
+outputs/average_random_test.in
+outputs/big_random_test.in
