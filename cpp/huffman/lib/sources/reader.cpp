@@ -43,5 +43,8 @@ char reader::read_char() {
 }
 
 void reader::jmp_to_stream_beg() {
-    my_file_reader.seekg(my_file_reader.beg);
+    my_file_reader.clear();
+    my_file_reader.seekg(0, my_file_reader.beg);
+    eof = false;
+    read_buffer();
 }
