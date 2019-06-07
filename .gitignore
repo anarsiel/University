@@ -73,6 +73,7 @@ hs_err_pid*
 
 # Cmake Files
 cmake-build-debug
+cmake-build-release
 CMakeLists.txt
 
 #test files
