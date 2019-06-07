@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/sources/writer.cpp" "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir/sources/writer.cpp.o"
   "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/gtest/gtest-all.cc" "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir/tests/gtest/gtest-all.cc.o"
   "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/gtest/gtest_main.cc" "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.o"
-  "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/tesing.cpp" "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir/tests/tesing.cpp.o"
+  "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/testing.cpp" "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir/tests/testing.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -119,7 +119,7 @@
 		<Unit filename="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/gtest/gtest_main.cc">
 			<Option target="lib"/>
 		</Unit>
-		<Unit filename="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/tesing.cpp">
+		<Unit filename="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/testing.cpp">
 			<Option target="lib"/>
 		</Unit>
 		<Unit filename="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/CMakeLists.txt">

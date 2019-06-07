@@ -312,32 +312,32 @@ tests/gtest/gtest_main.cc.s:
 	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.s
 .PHONY : tests/gtest/gtest_main.cc.s
 
-tests/tesing.o: tests/tesing.cpp.o
+tests/testing.o: tests/testing.cpp.o
 
-.PHONY : tests/tesing.o
+.PHONY : tests/testing.o
 
 # target to build an object file
-tests/tesing.cpp.o:
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/tesing.cpp.o
-.PHONY : tests/tesing.cpp.o
+tests/testing.cpp.o:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/testing.cpp.o
+.PHONY : tests/testing.cpp.o
 
-tests/tesing.i: tests/tesing.cpp.i
+tests/testing.i: tests/testing.cpp.i
 
-.PHONY : tests/tesing.i
+.PHONY : tests/testing.i
 
 # target to preprocess a source file
-tests/tesing.cpp.i:
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/tesing.cpp.i
-.PHONY : tests/tesing.cpp.i
+tests/testing.cpp.i:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/testing.cpp.i
+.PHONY : tests/testing.cpp.i
 
-tests/tesing.s: tests/tesing.cpp.s
+tests/testing.s: tests/testing.cpp.s
 
-.PHONY : tests/tesing.s
+.PHONY : tests/testing.s
 
 # target to generate assembly for a file
-tests/tesing.cpp.s:
-	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/tesing.cpp.s
-.PHONY : tests/tesing.cpp.s
+tests/testing.cpp.s:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/tests/testing.cpp.s
+.PHONY : tests/testing.cpp.s
 
 # Help Target
 help:
@@ -369,9 +369,9 @@ help:
 	@echo "... tests/gtest/gtest_main.o"
 	@echo "... tests/gtest/gtest_main.i"
 	@echo "... tests/gtest/gtest_main.s"
-	@echo "... tests/tesing.o"
-	@echo "... tests/tesing.i"
-	@echo "... tests/tesing.s"
+	@echo "... tests/testing.o"
+	@echo "... tests/testing.i"
+	@echo "... tests/testing.s"
 .PHONY : help
 
 

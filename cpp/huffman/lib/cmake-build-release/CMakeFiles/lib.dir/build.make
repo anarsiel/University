@@ -148,18 +148,18 @@ CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/gtest/gtest_main.cc" -o CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.s
 
-CMakeFiles/lib.dir/tests/tesing.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/tests/tesing.cpp.o: ../tests/tesing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lib.dir/tests/tesing.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lib.dir/tests/tesing.cpp.o -c "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/tesing.cpp"
+CMakeFiles/lib.dir/tests/testing.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/tests/testing.cpp.o: ../tests/testing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lib.dir/tests/testing.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lib.dir/tests/testing.cpp.o -c "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/testing.cpp"
 
-CMakeFiles/lib.dir/tests/tesing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/tests/tesing.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/tesing.cpp" > CMakeFiles/lib.dir/tests/tesing.cpp.i
+CMakeFiles/lib.dir/tests/testing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lib.dir/tests/testing.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/testing.cpp" > CMakeFiles/lib.dir/tests/testing.cpp.i
 
-CMakeFiles/lib.dir/tests/tesing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/tests/tesing.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/tesing.cpp" -o CMakeFiles/lib.dir/tests/tesing.cpp.s
+CMakeFiles/lib.dir/tests/testing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lib.dir/tests/testing.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/testing.cpp" -o CMakeFiles/lib.dir/tests/testing.cpp.s
 
 # Object files for target lib
 lib_OBJECTS = \
@@ -170,7 +170,7 @@ lib_OBJECTS = \
 "CMakeFiles/lib.dir/sources/decoder.cpp.o" \
 "CMakeFiles/lib.dir/tests/gtest/gtest-all.cc.o" \
 "CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.o" \
-"CMakeFiles/lib.dir/tests/tesing.cpp.o"
+"CMakeFiles/lib.dir/tests/testing.cpp.o"
 
 # External object files for target lib
 lib_EXTERNAL_OBJECTS =
@@ -182,7 +182,7 @@ lib: CMakeFiles/lib.dir/sources/huffman.cpp.o
 lib: CMakeFiles/lib.dir/sources/decoder.cpp.o
 lib: CMakeFiles/lib.dir/tests/gtest/gtest-all.cc.o
 lib: CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.o
-lib: CMakeFiles/lib.dir/tests/tesing.cpp.o
+lib: CMakeFiles/lib.dir/tests/testing.cpp.o
 lib: CMakeFiles/lib.dir/build.make
 lib: CMakeFiles/lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable lib"

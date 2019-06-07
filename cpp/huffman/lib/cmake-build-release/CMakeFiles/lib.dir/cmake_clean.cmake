@@ -6,7 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lib.dir/sources/decoder.cpp.o"
   "CMakeFiles/lib.dir/tests/gtest/gtest-all.cc.o"
   "CMakeFiles/lib.dir/tests/gtest/gtest_main.cc.o"
-  "CMakeFiles/lib.dir/tests/tesing.cpp.o"
+  "CMakeFiles/lib.dir/tests/testing.cpp.o"
   "lib.pdb"
   "lib"
 )
