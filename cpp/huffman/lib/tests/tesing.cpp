@@ -73,6 +73,17 @@ TEST(hand_made_tests, italian_language_Test) {
     EXPECT_TRUE(files_are_equal(input, output));
 }
 
+TEST(hand_made_tests, huffman_code_test) {
+    std::string file_name = "huffman_text";
+
+    std::string input = input_path + file_name + input_file_ending;
+    std::string output = output_path + file_name + output_file_ending;
+
+    EXPECT_NO_THROW(encode(input, buffer_path));
+    EXPECT_NO_THROW(decode(buffer_path, output));
+    EXPECT_TRUE(files_are_equal(input, output));
+}
+
 TEST(hand_made_tests, japanese_language_test) {
     std::string file_name = "Osamu_Dazai_No_longer_human_jap";
 
@@ -89,6 +100,28 @@ TEST(hand_made_tests, empty_file_test) {
 
     std::string input = input_path + file_name + input_file_ending;
     std::string output = output_path + file_name + output_file_ending;
+
+    EXPECT_NO_THROW(encode(input, buffer_path));
+    EXPECT_NO_THROW(decode(buffer_path, output));
+    EXPECT_TRUE(files_are_equal(input, output));
+}
+
+TEST(hand_made_tests, picture_test) {
+    std::string file_name = "manowar";
+
+    std::string input = input_path + file_name + ".jpg";
+    std::string output = output_path + file_name + ".jpg";
+
+    EXPECT_NO_THROW(encode(input, buffer_path));
+    EXPECT_NO_THROW(decode(buffer_path, output));
+    EXPECT_TRUE(files_are_equal(input, output));
+}
+
+TEST(hand_made_tests, video_test) {
+    std::string file_name = "manowar_concert";
+
+    std::string input = input_path + file_name + ".mp4";
+    std::string output = output_path + file_name + ".mp4";
 
     EXPECT_NO_THROW(encode(input, buffer_path));
     EXPECT_NO_THROW(decode(buffer_path, output));
@@ -146,22 +179,31 @@ TEST(random_tests, one_mb_test) {
     EXPECT_NO_THROW(decode(buffer_path, output));
     EXPECT_TRUE(files_are_equal(input, output));
 }
+//
+//
+//
+//  ! ACHTUNG !
+//
+//  This test is huge, so run it only under release mode.
+//  To change debug mode on release (OS X), please follow these steps:
+//  (Settings -> Build, Execution, Deployment -> CMake) and change Debug on Release.
+//
 
-TEST(random_tests, many_mb_test) {
-    std::string file_name = "big_random_test";
-
-    std::string input = input_path + file_name + input_file_ending;
-    std::string output = output_path + file_name + output_file_ending;
-
-    writer w = writer(input);
-    std::mt19937 int_random(static_cast<unsigned int>(time(0)));
-    auto between_random = std::bind(std::uniform_int_distribution<uint8_t>(0, 255), int_random);
-    for (size_t i = 0; i < MANY_MB; ++i) {
-        uint8_t c = between_random();
-        w.write_char(c);
-    }
-
-    EXPECT_NO_THROW(encode(input, buffer_path));
-    EXPECT_NO_THROW(decode(buffer_path, output));
-    EXPECT_TRUE(files_are_equal(input, output));
-}
+//TEST(random_tests, many_mb_test) {
+//    std::string file_name = "big_random_test";
+//
+//    std::string input = input_path + file_name + input_file_ending;
+//    std::string output = output_path + file_name + output_file_ending;
+//
+//    writer w = writer(input);
+//    std::mt19937 int_random(static_cast<unsigned int>(time(0)));
+//    auto between_random = std::bind(std::uniform_int_distribution<uint8_t>(0, 255), int_random);
+//    for (size_t i = 0; i < MANY_MB; ++i) {
+//        uint8_t c = between_random();
+//        w.write_char(c);
+//    }
+//
+//    EXPECT_NO_THROW(encode(input, buffer_path));
+//    EXPECT_NO_THROW(decode(buffer_path, output));
+//    EXPECT_TRUE(files_are_equal(input, output));
+//}

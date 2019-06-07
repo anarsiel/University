@@ -2,3 +2,5 @@ buffer.buf
 
 gtest/
 *_random_test.*
+outputs/*.jpg
+outputs/*.mp4
