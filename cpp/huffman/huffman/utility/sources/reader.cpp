@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <functional>
 
-#include "../headers/reader.h"
+#include "utility/headers/reader.h"
 
 void reader::read_buffer() {
     my_file_reader.read(reinterpret_cast<char *>(buffer), BUFFER_SIZE);

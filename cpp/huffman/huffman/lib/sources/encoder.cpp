@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <functional>
 
-#include "../headers/encoder.h"
+#include "lib/headers/encoder.h"
 #include "lib/headers/huffman.h"
 
 encoder::encoder(std::string const &input_file_name, std::string const &outputput_file_name) : r(input_file_name), w(outputput_file_name) {}

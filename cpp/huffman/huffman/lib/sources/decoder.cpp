@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <functional>
 
-#include "../headers/decoder.h"
+#include "lib/headers/decoder.h"
 
 decoder::decoder(std::string const &input_file_name, std::string const &output_file_name)
         : r(input_file_name), w(output_file_name), input_file_name(input_file_name), output_file_name(output_file_name) {}

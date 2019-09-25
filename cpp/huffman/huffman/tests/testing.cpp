@@ -5,9 +5,9 @@
 #include <random>
 #include <algorithm>
 #include <functional>
-#include "../headers/decoder.h"
-#include "../headers/encoder.h"
-#include "../headers/reader.h"
+#include "lib/headers/decoder.h"
+#include "lib/headers/encoder.h"
+#include "utility/headers/reader.h"
 
 #include "gtest/gtest.h"
 
@@ -35,9 +35,9 @@ bool files_are_equal(std::string const &file_name1, std::string const &file_name
     return r1.is_eof() && r2.is_eof();
 }
 
-static std::string const &input_path = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/inputs/";
-static std::string const &output_path = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/outputs/";
-static std::string const &buffer_path = "/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/tests/buffer.buf";
+static std::string const &input_path = "../../tests/inputs";
+static std::string const &output_path = "../../tests/outputs";
+static std::string const &buffer_path = "../../tests/buffer.buf";
 
 static std::string const &input_file_ending = ".in";
 static std::string const &output_file_ending = ".out";

@@ -5,10 +5,10 @@
 #include <algorithm>
 #include <functional>
 
-#include "../headers/writer.h"
+#include "utility/headers/writer.h"
 
 writer::writer(std::string const &file_name) :
-        my_file_writer(file_name, std::ofstream::binary), start_index(0), file_name(file_name) {}
+        my_file_writer(file_name, std::ofstream::binary), file_name(file_name), start_index(0) {}
 
 writer::~writer() {
     write_buffer();

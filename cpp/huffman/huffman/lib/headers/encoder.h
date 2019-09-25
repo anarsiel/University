@@ -10,8 +10,8 @@
 #include <algorithm>
 #include <functional>
 
-#include "reader.h"
-#include "writer.h"
+#include "utility/headers/reader.h"
+#include "utility/headers/writer.h"
 
 struct encoder {
 
