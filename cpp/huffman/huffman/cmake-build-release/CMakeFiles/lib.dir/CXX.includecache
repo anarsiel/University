@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/headers/huffman.h
+string
+-
+vector
+-
+queue
+-
+unordered_map
+-
+
+/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/sources/huffman.cpp
+string
+-
+unordered_map
+-
+../headers/huffman.h
+/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/headers/huffman.h
+

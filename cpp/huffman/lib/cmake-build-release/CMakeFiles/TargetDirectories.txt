@@ -1,3 +1,0 @@
-/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/edit_cache.dir
-/Users/admin/Documents/University/#GitHub/cpp/huffman/lib/cmake-build-release/CMakeFiles/lib.dir
