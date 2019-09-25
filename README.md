@@ -40,6 +40,10 @@
   * [Длинная арифметика на C++](https://github.com/SweeetyFox/University/tree/master/cpp/asm-bigint)
   * [Длинная арифметика + CopyOnWrite + SmallObjectOptimization](https://github.com/SweeetyFox/University/tree/master/cpp/cpp-bigint-optimized)
   * [Huffman](https://github.com/anarsiel/University/tree/master/cpp/huffman/lib)
+  
+Экзамены:
+  * [Первая попытка: std::vector + small-object&copy-on-write !!!HARD!!!](https://github.com/anarsiel/Cpp-Vector)
+  * [Вторая попытка: std::list](https://github.com/anarsiel/Cpp-List)
 
 ## [Парадигмы программирования](https://github.com/SweeetyFox/University/tree/master/paradigms)
 ### Первый семестр
