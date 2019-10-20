@@ -68,6 +68,12 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
+header nav .underlined {
+    text-decoration: underline;
+    color: navy;
+    display: inline;
+}
+
 .middle {
     margin-top: 1rem;
     overflow: auto;

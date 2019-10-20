@@ -20,14 +20,17 @@
     </div>
     <nav>
         <ul>
-            <#assign x=findBy(users, "uri", uri)!/>
-            <#if x.endsWith("/help")>
+            <#if uri="/misc/help">
                 <li><a href="/index">Index</a></li>
+                <div class="underlined">
+                    <li><a href="/misc/help">Help</a></li>
+                </div>
             <#else>
-                <li><a href="/index">Index239</a></li>
+                <div class="underlined">
+                    <li><a href="/index">Index</a></li>
+                </div>
+                <li><a href="/misc/help">Help</a></li>
             </#if>
-
-            <li><a href="/misc/help">Help</a></li>
         </ul>
     </nav>
 </header>
