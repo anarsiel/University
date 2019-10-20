@@ -1,5 +1,5 @@
 #
-# JAVA
+# Java
 #
 
 # Compiled class file
@@ -25,3 +25,60 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+
+#
+# C++
+#
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#
+# Own
+#
+
+# IDE files
+.idea/
+
+# Cmake Files
+cmake-build-debug
+cmake-build-release
+CMakeLists.txt
+
+#test files
+*Test*.java
+*test*.java
+
+#temporary baned cpp hw's
+*/cpp/cpp-bigint-optimized/*
