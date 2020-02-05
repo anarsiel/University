@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.StringTokenizer;
 
+@SuppressWarnings("ALL")
 public class A {
     public static void main(String[] args) throws IOException {
         InputReader reader = new InputReader(System.in);
