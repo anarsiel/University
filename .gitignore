@@ -5,6 +5,9 @@
 # Korneev's Tests
 **__Test__Walk__**
 
+# iml files
+*.iml
+
 # Compiled class file
 *.class
 
