@@ -1,4 +1,9 @@
 # ITMO University
+
+1 курс - 38 группа
+
+2 курс - 37 группа
+
 ## [Алгоритмы и структуры данных](https://github.com/anarsiel/University/tree/master/algo)
 ### Первый Семестр
   Лабораторные:
@@ -25,6 +30,11 @@
 Лабораторные:
   * [DFS + MST](https://github.com/anarsiel/University/tree/master/algo/3-term/labs/dfs-mst)
   * [Игры + кратчайшие пути](https://github.com/anarsiel/University/tree/master/algo/3-term/labs/games-and-shortest-paths)
+  
+### Четвёртый Семестр
+Лабораторные:
+  * [Math](https://github.com/anarsiel/University/tree/master/algo/4-term/labs/Math)
+  * [Min cost max flow](https://github.com/anarsiel/University/tree/master/algo/4-term/labs/min-cost-max-flow)
 
 ## [Дискретная математика](https://github.com/anarsiel/University/tree/master/dm)
 ### Первый семестр
@@ -41,6 +51,14 @@
 Лабораторные:
   * [Гамильтоновы пути](https://github.com/anarsiel/University/tree/master/dm/3-term/Hamiltonian-paths)
   * [Матроиды](https://github.com/anarsiel/University/tree/master/dm/3-term/Matroids-five-tasks)
+  
+ ### Четвёртый Семестр
+Лабораторные:
+  * [Паросочетания](https://github.com/anarsiel/University/tree/master/algo/4-term/labs/Math)
+  * [Funcs](https://github.com/anarsiel/University/tree/master/algo/4-term/labs/funcs)
+  * [Потоки](https://github.com/anarsiel/University/tree/master/algo/4-term/labs/streams)
+  * [Машина Тьюринга](https://github.com/anarsiel/University/tree/master/dm/4-term/turing-machine)
+
   
 ## [Язык программирования С++](https://github.com/anarsiel/University/tree/master/cpp)
 ### Второй семестр
@@ -96,3 +114,19 @@
 - [Процессоры: общего назначения/потоковые, ядра/многопроцессорные системы, одновременная многопоточность (SMT, HT)](https://github.com/anarsiel/computer-architecture/blob/master/2_6/2_6.pdf)
 
 ## [Wёb](https://github.com/anarsiel/University/tree/master/web)
+### Третий семестр
+[Домашки](https://github.com/anarsiel/University/tree/master/web)
+
+## [Математическая логика](https://github.com/anarsiel/University/tree/master/matlog)
+### Четвертый семестр
+[Лабы](https://github.com/anarsiel/University/tree/master/matlog/lab-01)
+
+Определения к зачёту:
+* Основной файл
+* Определения по Рамазану
+
+## [Технологии Java](https://github.com/anarsiel/University/tree/master/java)
+### Четвертый семестр
+* [Домашки](https://github.com/anarsiel/University/tree/master/java/java-hws/java-solutions/ru/ifmo/rain/dimitrov)
+
+* [Экзамен](https://github.com/anarsiel/University/tree/master/java/java-exam-2020)
