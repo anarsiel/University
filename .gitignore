@@ -91,4 +91,6 @@ CMakeLists.txt
 
 # venvs
 */venv/*
-ml/hw-09/venv/*
+ml/*/venv/*
+ml/hw-04/messages/*
+
