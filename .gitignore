@@ -88,3 +88,7 @@ CMakeLists.txt
 
 #temporary baned cpp hw's
 */cpp/cpp-bigint-optimized/*
+
+# venvs
+*/venv/*
+ml/hw-09/venv/*
