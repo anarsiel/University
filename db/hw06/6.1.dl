@@ -1,0 +1,10 @@
+DoHaveMarks(StudentId, CourseId) :-
+    Marks(StudentId, CourseId, Marks).
+DoHaveBadStudents(GroupId, CourseId) :-
+    Students(StudentId, StudentName, GroupId),
+    Courses(CourseId, CourseName),
+    not DoHaveMarks(StudentId, CourseId).
+Result(GroupName, CourseName) :-
+    Courses(CourseId, CourseName),
+    Groups(GroupId, GroupName),
+    not DoHaveBadStudents(GroupId, CourseId).

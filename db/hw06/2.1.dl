@@ -1,0 +1,4 @@
+Result(StudentId, StudentName, GroupName) :-
+    Groups(GroupId, GroupName),
+    Students(StudentId, StudentName, GroupId),
+    StudentId = StudentId.

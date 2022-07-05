@@ -1,0 +1,6 @@
+Result(TeamId) :-
+    Runs(RunId, SessionId, Letter, SubmitTime, Accepted),
+    Accepted = 0,
+    Letter = :Letter,
+    Sessions(SessionId, TeamId, ContestId, Start),
+    ContestId = :ContestId.

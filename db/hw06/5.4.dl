@@ -1,0 +1,13 @@
+CoursesNeeded(CourseId, GroupId) :-
+    Plan(GroupId, CourseId, LecturerId),
+    Lecturers(LecturerId, :LecturerName).
+StudentsNeededAndUnNeeded(StudentId, CourseId) :-
+    Marks(StudentId, CourseId, Mark),
+    CoursesNeeded(CourseId, GroupId).
+StudentsUnNeeded(StudentId) :-
+    Students(StudentId, StudentName, GroupId),
+    CoursesNeeded(CourseId, GroupId),
+    not StudentsNeededAndUnNeeded(StudentId, CourseId).
+Result(StudentId) :-
+    Students(StudentId, StudentName, GroupId),
+    not StudentsUnNeeded(StudentId).

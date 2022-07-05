@@ -1,0 +1,9 @@
+DoHaveCourse(StudentId, CourseId) :-
+    Students(StudentId, StudentName, GroupId),
+    Plan(GroupId, CourseId, LecturerId).
+DoHaveMark(StudentId, CourseId) :-
+    Marks(StudentId, CourseId, Mark).
+Result(StudentId, CourseId) :-
+    DoHaveCourse(StudentId, CourseId).
+Result(StudentId, CourseId) :-
+    DoHaveMark(StudentId, CourseId).

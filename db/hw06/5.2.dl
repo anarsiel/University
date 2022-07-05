@@ -1,0 +1,8 @@
+DoHaveMark(StudentId) :-
+    Students(StudentId, StudentName, GroupId),
+    Marks(StudentId, CourseId, Mark),
+    Plan(GroupId, CourseId, LecturerId),
+    Lecturers(LecturerId, :LecturerName).
+Result(StudentId) :-
+    Students(StudentId, StudentName, GroupId),
+    not DoHaveMark(StudentId).

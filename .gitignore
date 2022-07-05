@@ -93,4 +93,5 @@ CMakeLists.txt
 */venv/*
 ml/*/venv/*
 ml/hw-04/messages/*
+crowdsource/*
 
