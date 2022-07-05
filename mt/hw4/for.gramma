@@ -1,0 +1,38 @@
+package com.company;
+
+start funHeader;
+
+funHeader := FOR OPENBRACE a SEMICOLON b SEMICOLON c CLOSEBRACE;
+
+a := type NAME EQ VALUE;
+
+b := NAME cmp VALUE;
+
+c := NAME cPrime | cPrime NAME;
+
+cPrime := INC | DEC;
+
+cmp := LESS | GREATER | DOUBLEEQ;
+
+type := INT | DOUBLE;
+
+FOR = "for";
+SEMICOLON = ";";
+OPENBRACE = "(";
+CLOSEBRACE = ")";
+EQ = "=";
+
+INC = "++";
+DEC = "--";
+
+LESS = "<";
+GREATER = ">";
+DOUBLEEQ = "==";
+
+INT = "int";
+DOUBLE = "double";
+
+VALUE = '[0-9]+';
+NAME = '[a-zA-Z0-9]+';
+
+WS -> '\s+';

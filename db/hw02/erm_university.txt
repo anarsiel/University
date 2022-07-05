@@ -1,0 +1,27 @@
+Groups
+-
+Id id  FK >-< Subjects.Name
+Name groupName
+YearOfStudy int FK -< Students.LastName
+
+Teachers
+-
+Id id FK >-< Subjects.Id
+FirstName name
+LastName name
+
+Students
+-
+Id id FK -< Marks.Id
+FirstName name
+LastName name
+
+Subjects
+-
+Id id FK -< Marks.Id
+Name subjectName
+
+Marks
+-
+Id id
+Value mark

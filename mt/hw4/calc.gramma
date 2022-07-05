@@ -1,0 +1,34 @@
+package com.company;
+
+start expr;
+
+expr : Complex := term exprs(term) { exprs };
+exprs <acc: Complex> : Complex := PLUS term { val next = plus(acc, term) } exprs(next) {exprs}
+ | MINUS term { val next = minus(acc, term) } exprs(next) {exprs}
+ | {acc} ;
+
+term : Complex := factor terms(factor) {terms} ;
+terms <acc: Complex> : Complex := MUL factor terms({mul(acc, factor)}) {terms}
+ | DIV factor terms({div(acc, factor)}) {terms}
+ | {acc} ;
+
+factor : Complex := single factors(single) {factors};
+
+factors <acc: Complex> : Complex := {acc};
+
+single : Complex := OPENBRACE expr CLOSEBRACE {expr} | complex {complex} ;
+complex : Complex := OPENSQUARE NUMBER COMMA complexTail({NUMBER.toDouble()}) {complexTail};
+complexTail <fst : Double> : Complex := NUMBER CLOSESQUARE {Complex(fst, NUMBER.toDouble())};
+
+
+PLUS = "+";
+MINUS = "-";
+DIV = "/";
+MUL = "*";
+OPENBRACE = "(";
+CLOSEBRACE = ")";
+OPENSQUARE = "[";
+CLOSESQUARE = "]";
+COMMA = ",";
+NUMBER = '[0-9]+';
+WS -> '\s+';
